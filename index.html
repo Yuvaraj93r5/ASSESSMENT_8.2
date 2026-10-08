@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Web Application</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; }
+        .form-container { background: white; padding: 25px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        .new-feature { margin-top: 20px; padding: 10px; background: #e2f0d9; border-left: 5px solid #70ad47; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Feedback Form</h2>
+    <form id="feedbackForm">
+        <div class="form-group">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" required>
+        </div>
+        <div class="form-group">
+            <label for="facultyName">Faculty Name:</label>
+            <input type="text" id="facultyName" required>
+        </div>
+        <div class="form-group">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+        </div>
+        <div class="form-group">
+            <label for="registerNumber">Register Number:</label>
+            <input type="text" id="registerNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" id="department" required>
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating (1-5):</label>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Average</option>
+                <option value="1">1 - Poor</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comments">Feedback/Comments:</label>
+            <textarea id="comments" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <!-- Step 10: Placeholder for Modification/New Feature -->
+    <div id="thankYouFeature" class="new-feature">
+        <h3>Thank You!</h3>
+        <p>Your feedback has been successfully submitted and recorded.</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Feedback submitted successfully!');
+        // Reveal feature if updated version is running
+        document.getElementById('thankYouFeature').style.display = 'block';
+    });
+</script>
+</body>
+</html>
