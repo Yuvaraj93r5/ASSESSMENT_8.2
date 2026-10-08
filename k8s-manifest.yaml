@@ -17,7 +17,7 @@ spec:
       containers:
       - name: feedback-app
         # Replace 'your-dockerhub-username' with your actual Docker Hub username
-        image: your-dockerhub-username/student-feedback:v1
+        image: yuvaraj93/student-feedback:v1
         ports:
         - containerPort: 80
 ---
